@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Nishaven
+Copyright (c) 2026 KeyMarquee contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,36 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---------------------------------------------------------------------------
+
+THIRD-PARTY COMPONENTS / 第三方组件声明
+
+1. PyQt6 (Riverbank Computing) — licensed under the GNU LGPL v3.
+   This project uses PyQt6 unmodified via its published Python bindings.
+   The MIT license above applies to THIS PROJECT'S CODE ONLY, not to PyQt6.
+
+   The distributed single-file executable is provided for convenience. To
+   comply with the LGPL "user-replaceable library" requirement, the complete
+   source tree is included so that the application can be rebuilt against a
+   system-installed PyQt6 (e.g. `pip install PyQt6` + `python main.py`, or a
+   PyInstaller build without bundled PyQt6 binaries). If you redistribute
+   binaries of this application, you must do the same and honor the LGPL v3
+   terms for PyQt6 itself (see https://www.riverbankcomputing.com/software/pyqt/intro
+   and https://www.gnu.org/licenses/lgpl-3.0.html).
+
+2. pynput — licensed under the GNU LGPL v3. Same terms as above apply.
+
+3. PyInstaller — licensed under the GPL with a special exception that allows
+   its output (the bootloader) to be used in projects of any license.
+   See https://pyinstaller.org/en/stable/license.html
+
+---------------------------------------------------------------------------
+
+中文摘要（仅供参考，以英文原文为准）
+
+本项目自身代码以 MIT 许可证发布。程序依赖的 PyQt6 与 pynput 采用 GNU LGPL v3
+许可：随附的单文件可执行程序仅为使用便利，完整源码树已包含在内，用户可使用
+自行安装的 PyQt6/pynput 重新构建本应用（满足 LGPL 对“用户可替换动态库”的
+要求）。再分发本应用的二进制文件时，请同样遵守 LGPL v3 对 PyQt6/pynput 的
+许可条款。
