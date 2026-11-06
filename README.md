@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34462286/README.md)
 <div align="center">
 
 # KeyMarquee
@@ -12,7 +11,7 @@
 [![GUI](https://img.shields.io/badge/GUI-PyQt6-41cd52)](#)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
-*Formerly known as KeyCast (internal name).*
+*v0.1.0 — formerly developed under the internal name KeyCast.*
 
 </div>
 
@@ -35,7 +34,16 @@ operation reviews.
 最旧从顶部挤出）、可选的按键计数统计（TOP15 + 全部按键 + 占比柱状图）。
 适合软件演示、录屏教程、培训材料与产线操作复盘。
 
-> 截图占位：`docs/screenshot-overlay.png`（悬浮条）、`docs/screenshot-stats.png`（统计页）
+<table>
+<tr>
+<td width="55%"><img src="docs/screenshot-overlay.png" alt="KeyMarquee overlay strip"></td>
+<td width="45%"><img src="docs/screenshot-stats.png" alt="KeyMarquee statistics view"></td>
+</tr>
+<tr>
+<td align="center"><sub>10-slot FIFO strip, bottom-right anchor</sub></td>
+<td align="center"><sub>Statistics: TOP-15 bars + share of total</sub></td>
+</tr>
+</table>
 
 ---
 
@@ -68,12 +76,12 @@ the numbers always agree — including the 500 ms long-press rule.
 
 ### Portable exe (recommended / 推荐)
 
-1. Download `KeyCast.exe` from
-   [**Releases**](../../releases) (single file, no installer, no runtime needed);
+1. Download `KeyMarquee.exe` from
+   [**Releases**](releases) (single file, no installer, no runtime needed);
 2. Put it anywhere (e.g. `D:\Tools\KeyMarquee\`);
 3. Double-click. A tray icon appears; the strip shows up bottom-right.
 
-1. 从 [**Releases**](../../releases) 下载单文件 `KeyCast.exe`（免安装、免运行库）；
+1. 从 [**Releases**](releases) 下载单文件 `KeyMarquee.exe`（免安装、免运行库）；
 2. 放到任意目录（如 `D:\Tools\KeyMarquee\`）；
 3. 双击运行——托盘出现图标，悬浮条显示在屏幕右下。
 
@@ -84,7 +92,7 @@ the numbers always agree — including the 500 ms long-press rule.
 ### From source / 从源码运行
 
 ```bat
-git clone https://github.com/<you>/keymarquee.git
+git clone https://github.com/<OWNER>/keymarquee.git
 cd keymarquee
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
@@ -102,7 +110,7 @@ Locked versions are listed in `requirements.lock.txt`.
 .venv\Scripts\python -m PyInstaller --noconfirm --workpath build\work --distpath dist build.spec
 ```
 
-Output: `dist\KeyCast.exe` (≈ 35 MB, includes icon & version info).
+Output: `dist\KeyMarquee.exe` (≈ 35 MB, includes icon & version info).
 
 ---
 
@@ -168,7 +176,7 @@ visualizers (Keyviz, KeyCastr):
 ## Project layout / 工程结构
 
 ```
-keycast/
+.
 ├── main.py        # assembly & lifecycle / 装配与生命周期
 ├── listener.py    # pynput hooks → Qt signals (500ms long-press rule) / 全局钩子→信号
 ├── formatter.py   # key naming, modifier split, wheel burst merge / 键名与合并
